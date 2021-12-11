@@ -76,9 +76,18 @@ namespace WindowsFormsAppEasyCs112
                 }
                 catch
                 {
-                    MessageBox.Show("Input URL")
+                    MessageBox.Show("Input URL");
                 }
             }
+            else if (sender == tsb[1])
+            {
+                wb.GoBack();
+            }
+        }
+
+        public void WbCanGoBackChanged(Object sender, EventArgs e)
+        {
+            tsb[1].Enabled = wb.CanGoBack;
         }
     }
 }
